@@ -37,7 +37,7 @@ static UIView *view;
     [self.view addSubview:self.collectionView];
     
     _dataSource = [NSMutableArray array];
-    for (int i = 0; i <= 50; i++) {
+    for (int i = 0; i <= 30; i++) {
         CGFloat hue  = (arc4random() % 256 / 256.0f);
         CGFloat saturation = (arc4random() % 128 / 256.0f) + 0.5;
         CGFloat brightness = (arc4random() % 128 / 256.0f) + 0.5;
@@ -244,7 +244,7 @@ static UIView *view;
     
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-        layout.itemSize = CGSizeMake((WIDTH - 15)/4, (WIDTH - 15)/4);
+        layout.itemSize = CGSizeMake((WIDTH - 15)/3, (WIDTH - 15)/3);
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 20, WIDTH, HEIGHT - 20) collectionViewLayout:layout];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         layout.minimumLineSpacing = 5;
